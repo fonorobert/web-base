@@ -71,10 +71,17 @@ a.external::after {
   content: "\2197\FE0E";
 }
 
+/* Alternate linkout marker
 a[href^="http"]:where(:not([href*="fonorobert.com/"]))::after {
   font-family: var(--font-neogrotesque);
   content: "︎\2197\FE0E";
 }
+*/
+
+a[href^="http"]:where(:not([href*="fono.day/"]))::after{
+    content: "︎↗";
+}
+
 nav a::after {
   content: "" !important;
 }
